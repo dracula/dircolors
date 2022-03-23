@@ -4,6 +4,8 @@
 
 ![Screenshot](./screenshot.png)
 
+This theme follows the intent of dircolors upstream, just replacing basic ANSI colors used there with their RGB mappings specified in the Dracula theme.
+
 ## Install
 
 All instructions can be found at [draculatheme.com/dircolors](https://draculatheme.com/dircolors).
