@@ -1,15 +1,19 @@
 # Configuration file for dircolors, a utility to help you set the
 # LS_COLORS environment variable used by GNU ls with the --color option.
 
-# Copyright (C) 1996-2022 Free Software Foundation, Inc.
+# Copyright (C) 1996-2023 Free Software Foundation, Inc.
 # Copying and distribution of this file, with or without modification,
 # are permitted provided the copyright notice and this notice are preserved.
 
+#
 # The keywords COLOR, OPTIONS, and EIGHTBIT (honored by the
 # slackware version of dircolors) are recognized but ignored.
 
 # Global config options can be specified before TERM or COLORTERM entries
 
+# ===================================================================
+# Terminal filters
+# ===================================================================
 # Below are TERM or COLORTERM entries, which can be glob patterns, which
 # restrict following config to systems with matching environment variables.
 COLORTERM ?*
@@ -39,6 +43,9 @@ TERM tmux*
 TERM vt48;2;98;114;164
 TERM xterm*
 
+# ===================================================================
+# Basic file attributes
+# ===================================================================
 # Below are the color init strings for the basic file types.
 # One can use codes for 256 or more colors supported by modern terminals.
 # The default color codes use the capabilities of an 8 color terminal
@@ -73,9 +80,15 @@ STICKY 38;2;248;248;242;48;2;189;147;249	# dir with the sticky bit set (+t) and 
 # This is for files with execute permission:
 EXEC 01;38;2;80;250;123
 
+# ===================================================================
+# File extension attributes
+# ===================================================================
 # List any file extensions like '.gz' or '.tar' that you would like ls
-# to color below. Put the extension, a space, and the color init string.
-# (and any comments you want to add after a '#')
+# to color below. Put the suffix, a space, and the color init string.
+# (and any comments you want to add after a '#').
+# Suffixes are matched case insensitively, but if you define different
+# init strings for separate cases, those will be honored.
+#
 
 # If you use DOS-style suffixes, you may want to uncomment the following:
 #.cmd 01;38;2;80;250;123 # executables (bright green)
@@ -88,7 +101,7 @@ EXEC 01;38;2;80;250;123
 #.sh  01;38;2;80;250;123
 #.csh 01;38;2;80;250;123
 
- # archives or compressed (bright red)
+# archives or compressed (bright red)
 .tar 01;38;2;255;85;85
 .tgz 01;38;2;255;85;85
 .arc 01;38;2;255;85;85
@@ -230,5 +243,6 @@ EXEC 01;38;2;80;250;123
 .rpmorig 00;38;2;98;114;164
 .rpmsave 00;38;2;98;114;164
 
+#
 # Subsequent TERM or COLORTERM entries, can be used to add / override
 # config specific to those matching environment variables.
