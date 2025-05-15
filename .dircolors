@@ -1,7 +1,7 @@
 # Configuration file for dircolors, a utility to help you set the
 # LS_COLORS environment variable used by GNU ls with the --color option.
 
-# Copyright (C) 1996-2024 Free Software Foundation, Inc.
+# Copyright (C) 1996-2025 Free Software Foundation, Inc.
 # Copying and distribution of this file, with or without modification,
 # are permitted provided the copyright notice and this notice are preserved.
 
@@ -41,6 +41,7 @@ TERM st
 TERM terminator
 TERM tmux*
 TERM vt48;2;98;114;164
+TERM vt220
 TERM xterm*
 
 # ===================================================================
@@ -160,6 +161,7 @@ EXEC 01;38;2;80;250;123
 .avif 01;38;2;255;121;198
 .jpg 01;38;2;255;121;198
 .jpeg 01;38;2;255;121;198
+.jxl 01;38;2;255;121;198
 .mjpg 01;38;2;255;121;198
 .mjpeg 01;38;2;255;121;198
 .gif 01;38;2;255;121;198
